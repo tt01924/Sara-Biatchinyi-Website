@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(to bottom, #A9A6A6, #1E541D);
+    height: 100vh;
+    margin: 0;
+    width: 50%;
+}
+
+h1 {
+    color: #E0F561;
+    margin-left: 30%;
+    font-size: 80px;
+    margin-top: -13%;
+}
+
+h2, p {
+    color: #FFA4FB;
+    margin: 5%
+}
+
+h2 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 25px;
+}
+
+.arrow {
+    font-size: 100px;
+    margin: 50%;
+    color: #FFA4FB;
+}
+
+.help {
+    font-size: 32px;
+}
+
+#indexShowHelp {
+    background-color: transparent; /* Background color */
+    border: 0px;
+    border-radius: 10px; /* Border radius */
+    width: 500px;
+    height: 220px;
+    padding: 10px 20px; /* Padding */
+    font-size: 42px; /* Font size */
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer; /* Cursor style */
+}
