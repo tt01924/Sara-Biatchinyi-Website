@@ -27,4 +27,6 @@ p {
     height: relative;
     box-sizing: border-box;
     padding: 1rem;
+
+    /* border-width:3px; border-style:solid; border-color:#FF0000; */
 }
