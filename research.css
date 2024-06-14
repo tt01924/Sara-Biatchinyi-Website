@@ -1,0 +1,28 @@
+body {
+    background: #E1E1E1;
+    height: 100vh;
+    margin: 0;
+    width: 50%;
+}
+
+h2, p {
+    color: #FF0A8E;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.box {
+    background-color: transparent;
+    width: 100%;
+    height: relative;
+    border: 2px red;
+    box-sizing: border-box;
+    padding: 1rem;
+}
