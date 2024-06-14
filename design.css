@@ -9,10 +9,10 @@ h1 {
     color: #E0F561;
     margin-left: 30%;
     font-size: 80px;
-    margin-top: -13%;
+    margin-top: -12%;
 }
 
-h2, p {
+h2, h3, h4, p {
     color: #FFA4FB;
     margin: 5%
 }
@@ -21,8 +21,17 @@ h2 {
     font-size: 60px;
 }
 
-p {
+h3 {
     font-size: 25px;
+}
+
+h4 {
+    font-size: 30px;
+    font: bold;
+}
+
+p {
+    font-size: 15px
 }
 
 .arrow {
@@ -45,4 +54,48 @@ p {
     font-size: 42px; /* Font size */
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer; /* Cursor style */
+}
+
+
+
+/* CSS for carousel container */
+.carousel {
+    position: relative;
+    max-width: 600px; /* Set maximum width */
+    margin: 0 auto; /* Center the carousel */
+}
+
+/* CSS for slides */
+.slides {
+    display: flex; /* Arrange slides in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+}
+
+/* CSS for individual slide (image) */
+.slides img {
+    flex: 0 0 auto; /* Disable flex grow and shrink */
+    scroll-snap-align: start; /* Snap to start of each slide */
+    width: 100%; /* Fill the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* CSS for navigation buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #FFA4FB;
+    color: #ededed;
+    border: none;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+.prev {
+    left: 0;
 }

@@ -1,5 +1,5 @@
 # Sara-Biatchinyi-Website
-Project to showcase a clients research and graphic design portfolio in an unorthodox display.
+Project to showcase a clients research and graphic design portfolio in an unorthodox way.
 
 ## About
 **Freelance project working with a client.** <br/>
