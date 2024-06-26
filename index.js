@@ -44,3 +44,18 @@ nextButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// ************ Hover colour change ******************
+
+document.addEventListener('DOMContentLoaded', () => {
+    const leftHalf = document.querySelector('.left-half');
+    const rightHalf = document.querySelector('.right-half');
+
+    leftHalf.addEventListener('mouseenter', () => {
+        rightHalf.style.backgroundColor = '#FFA4FB'; // Change to desired color
+    });
+
+    leftHalf.addEventListener('mouseleave', () => {
+        rightHalf.style.backgroundColor = ''; // Revert to original color
+    });
+});

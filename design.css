@@ -1,8 +1,25 @@
 body {
-    background: #1E541D;
+    background: #F3F3EF;
     height: 100vh;
     margin: 0;
-    width: 50%;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-half, .right-half {
+    flex: 1;
+    transition: background-color 0.5s;
+}
+
+.left-half {
+    background-color: #1E541D;
+}
+
+.right-half {
+    background-color: #F3F3EF;
 }
 
 h1 {
@@ -11,7 +28,7 @@ h1 {
     font-size: 80px;
     margin-top: -10%;
     font-family: 'Ragilen', sans-serif;
-                                                
+    font-weight: 400;
 }
 
 h2, h3, h4, p {
@@ -39,6 +56,8 @@ h5 {
     margin-left: 10%;
     font-size: 60px;
     margin-bottom: -9%;
+    font-family: 'Ragilen', sans-serif;
+    font-weight: 400;
 }
 
 p {
