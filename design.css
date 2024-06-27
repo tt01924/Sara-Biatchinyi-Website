@@ -1,5 +1,5 @@
 body {
-    background: #F3F3EF;
+    /* background: #A9A6A6; */
     height: 100%;
     margin: 0;
 }
@@ -19,7 +19,7 @@ body {
 }
 
 .right-half {
-    background-color: #F3F3EF;
+    background-color: #E1E1E1;
 }
 
 h1 {
@@ -59,6 +59,13 @@ h5 {
     font-family: 'Ragilen', sans-serif;
     font-weight: 400;
 }
+h6 {
+    color: #FFA4FB;
+    margin: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+}
 
 p {
     font-size: 15px
@@ -74,8 +81,8 @@ p {
 /* CSS for carousel container */
 .carousel {
     position: relative;
-    max-width: 600px; /* Set maximum width */
-    margin: 0 auto; /* Center the carousel */
+    max-width: 600px; 
+    margin: 0 auto; 
 }
 
 /* CSS for slides */
@@ -131,20 +138,16 @@ footer {
 }
 
 #indexShowHelp {
-    background-color: #949494;
+    background-color: #A9A6A6;
     border: 0px;
-    padding: 10px 20px; /* Padding */
-    font-size: 2rem; /* Font size */
+    padding: 10px 20px;
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer; /* Cursor style */
     color: #E0F561;
 }
 
-.sectionPopUp {
-    position: absolute;
-}
-
-/* Styling for Help button */
+/* Styling for Help popup */
 .indexHelpPopup {
     display: none;
     position: fixed;
@@ -181,10 +184,10 @@ footer {
     font-size: 28px;
     font-weight: bold;
     left: 28%;
-  }
-  .indexPopupClose:hover,
-  .indexPopupClose:focus {
+}
+.indexPopupClose:hover,
+.indexPopupClose:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
