@@ -108,9 +108,15 @@ p {
 
 .next {
     right: 0;
+    border-radius: 10px;
+    bottom: 0;
+    background-color: transparent;
 }
 .prev {
     left: 0;
+    border-radius: 10px;
+    bottom: 0;
+    background-color: transparent;
 }
 
 
