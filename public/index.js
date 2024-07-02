@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var indexHelpPopup = document.getElementById("indexHelpPopup");
     var indexShowHelpBtn = document.getElementById("indexShowHelp");
     
-    // Get the close button inside the instructions popup
     var indexPopupCloseBtn = document.getElementById("indexPopupClose");
     
-    // When the user clicks on the button, show the instructions popup
     indexShowHelpBtn.addEventListener("click", function() {
         indexHelpPopup.style.display = "block";
     });
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         indexHelpPopup.style.display = "none";
     });
     
-    // When the user clicks anywhere outside of the instructions popup, close it
     window.addEventListener("click", function(event) {
         if (event.target == indexHelpPopup) {
             indexHelpPopup.style.display = "none";
@@ -47,15 +44,15 @@ nextButton.addEventListener('click', () => {
 
 // ************ Hover colour change ******************
 
-document.addEventListener('DOMContentLoaded', () => {
-    const leftHalf = document.querySelector('.left-half');
-    const rightHalf = document.querySelector('.right-half');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const leftHalf = document.querySelector('.left-half');
+//     const rightHalf = document.querySelector('.right-half');
 
-    leftHalf.addEventListener('mouseenter', () => {
-        rightHalf.style.backgroundColor = '#FFA4FB'; // Change to desired color
-    });
+//     leftHalf.addEventListener('mouseenter', () => {
+//         rightHalf.style.backgroundColor = '#FFA4FB'; 
+//     });
 
-    leftHalf.addEventListener('mouseleave', () => {
-        rightHalf.style.backgroundColor = ''; // Revert to original color
-    });
-});
+//     leftHalf.addEventListener('mouseleave', () => {
+//         rightHalf.style.backgroundColor = ''; 
+//     });
+// });
