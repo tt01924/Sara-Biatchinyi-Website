@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var indexHelpPopup = document.getElementById("indexHelpPopup");
     var indexShowHelpBtn = document.getElementById("indexShowHelp");
     
-    // Get the close button inside the instructions popup
     var indexPopupCloseBtn = document.getElementById("indexPopupClose");
     
-    // When the user clicks on the button, show the instructions popup
     indexShowHelpBtn.addEventListener("click", function() {
         indexHelpPopup.style.display = "block";
     });
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         indexHelpPopup.style.display = "none";
     });
     
-    // When the user clicks anywhere outside of the instructions popup, close it
     window.addEventListener("click", function(event) {
         if (event.target == indexHelpPopup) {
             indexHelpPopup.style.display = "none";
@@ -52,10 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightHalf = document.querySelector('.right-half');
 
     leftHalf.addEventListener('mouseenter', () => {
-        rightHalf.style.backgroundColor = '#FFA4FB'; // Change to desired color
+        rightHalf.style.backgroundColor = '#FFA4FB'; 
     });
 
     leftHalf.addEventListener('mouseleave', () => {
-        rightHalf.style.backgroundColor = ''; // Revert to original color
+        rightHalf.style.backgroundColor = ''; 
     });
 });
+
+// ************ Smooth scroll js to research projects *********
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+} 
