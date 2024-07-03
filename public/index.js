@@ -56,3 +56,9 @@ nextButton.addEventListener('click', () => {
 //         rightHalf.style.backgroundColor = ''; 
 //     });
 // });
+
+// ************ Smooth scroll js to research projects *********
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+} 
