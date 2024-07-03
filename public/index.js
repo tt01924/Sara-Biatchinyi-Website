@@ -44,18 +44,18 @@ nextButton.addEventListener('click', () => {
 
 // ************ Hover colour change ******************
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const leftHalf = document.querySelector('.left-half');
-//     const rightHalf = document.querySelector('.right-half');
+document.addEventListener('DOMContentLoaded', () => {
+    const leftHalf = document.querySelector('.left-half');
+    const rightHalf = document.querySelector('.right-half');
 
-//     leftHalf.addEventListener('mouseenter', () => {
-//         rightHalf.style.backgroundColor = '#FFA4FB'; 
-//     });
+    leftHalf.addEventListener('mouseenter', () => {
+        rightHalf.style.backgroundColor = '#FFA4FB'; 
+    });
 
-//     leftHalf.addEventListener('mouseleave', () => {
-//         rightHalf.style.backgroundColor = ''; 
-//     });
-// });
+    leftHalf.addEventListener('mouseleave', () => {
+        rightHalf.style.backgroundColor = ''; 
+    });
+});
 
 // ************ Smooth scroll js to research projects *********
 function scrollToSection(sectionId) {
