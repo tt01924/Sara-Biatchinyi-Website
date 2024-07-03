@@ -1,5 +1,4 @@
 body {
-    /* background: #A9A6A6; */
     height: 100%;
     margin: 0;
 }
@@ -24,6 +23,17 @@ body {
 
 .right-half {
     background-color: #E1E1E1;
+    color: #FF0A8E;
+}
+
+.right-half h2{
+    color: #FF0A8E;
+    font-size: 55px;
+}
+
+.right-half h3{
+    color: #FF0A8E;
+    font-size: 18px;
 }
 
 h1 {
