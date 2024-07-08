@@ -23,21 +23,6 @@ body {
     background-color: #75170B;
 }
 
-.right-half {
-    background-color: #E1E1E1;
-    color: #FF0A8E;
-}
-
-.right-half h2{
-    color: #FF0A8E;
-    font-size: 55px;
-}
-
-.right-half h3{
-    color: #FF0A8E;
-    font-size: 18px;
-}
-
 .secondSection {
     margin-top: 150px;
 }
