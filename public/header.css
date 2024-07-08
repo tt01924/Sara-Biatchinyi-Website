@@ -3,14 +3,16 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 
 .headerStar {
     height: 30px;
-    color: #D9D9D9;
 }
 
-.help {
+.contact {
     display: flex;
     justify-content: center;
 }
@@ -26,7 +28,7 @@ header {
 }
 
 /* Styling for Help popup */
-.indexHelpPopup {
+.contactPopup {
     display: none;
     position: fixed;
     z-index: 1;
@@ -39,33 +41,53 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.indexPopupContent {
-    background-color: #F3F3F3;
+.contactContent {
+    background-color: #D9D9D9;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 650px;
-    border-radius: 20px;
+    width: 40%;
+    border-radius: 8px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.indexPopupContent p:first-of-type,
-.indexPopupContent p:last-of-type {
-    font-weight: bold;
+.popupStar {
+    height: 50px;
 }
 
-.indexPopupClose {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    left: 28%;
+h7 {
+    color: #75170B;
+    font-size: 25px;
+    font-weight: 700;
+    
 }
-.indexPopupClose:hover,
-.indexPopupClose:focus {
-    color: black;
+
+h8 {
+    color: #75170B;
+    font-size: 25px;
+    
+}
+
+h8 a {
+    color: inherit;
     text-decoration: none;
-    cursor: pointer;
+}
+
+h8 a:hover {
+    text-decoration: underline;
+}
+
+h9 {
+    color: #75170B;
+    font-size: 15px;
+}
+
+h9 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h9 a:hover {
+    text-decoration: underline;
 }
