@@ -5,17 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="design.css"/>
         <link rel="stylesheet" href="research.css"/>
+        <link rel="stylesheet" href="header.css"/>
         <link href="https://fonts.cdnfonts.com/css/ragilen" rel="stylesheet">
         <title>Sara Biatchinyi</title>
-        <link rel="icon" type="image/x-icon" href="/FAVICON_1.ico">
+        <link rel="icon" type="image/x-icon" href="../public/FAVICON_1.ico">
     </head>
+<header>
+    <img class="headerStar" src="../headerImages/headerStar.png">
+
+    <div>
+        <button class="research">research</button>
+    </div>
+
+    <img class="headerStar" src="../headerImages/headerStar.png">
+
+    <div>
+        <button class="design">design</button>
+    </div>
+
+    <img class="headerStar" src="../headerImages/headerStar.png">
+
+    <div class="contact">
+        <button id="indexShowHelp" class="indexShowHelp">contact</button>
+    </div>
+
+    <img class="headerStar" src="../headerImages/headerStar.png">
+</header>
     <body>
         <div class="container">
             <div class="left-half">
                 <h2>hello, my name is</h2>
-            
                 <h1>Sara<br> Biatchinyi</h1>
-            
                 <h3>A passionate graphic designer and marketing creative with a mixed Italian and Congolese heritage. My global upbringing across Africa, Asia, Europe, and South America fuels my creativity and influences my design philosophy. areas of design: graphic design; visual identity development; branding; digital marketing; copywriting. languages: english, french, italian, spanish skills: adobe CC; Figma; Later; SEO copywriting; Google Analytics</h3>
                 <p class="arrow">&#8595;</p>
                 
@@ -35,7 +55,7 @@
                         </div>
                     <p>The Amsterdam based exhibition hosted by Fashion for Good: News From the Future highlights the creative works of up and coming fashion students and designers working with cotton. Alongside the event identity, my responsibilities included designing the physical space in terms of graphic work. Identifying the key elements of the exhibition in order to showcase the young talent.</p>
                 </section>
-        
+                
                 <section>
                     <h4>PVH Poster Series: GOODEEDS Archive</h4>
                     <div class="carousel">
@@ -52,32 +72,25 @@
                     </div>
                 <p>Alongside Aika Cherdabayeva, we developed a visionary platform concept with the purpose of overcoming boundaries that often alienate young artists and designers from non-white, cis, male environments. This platform serves as a space to create a directory of talented creatives from underrepresented communities, promoting inclusivity and providing them with greater visibility.</p>
                 </section>
-        
-                <section>
-                    <h5>Contact</h5>
-                    <h6>Please do not hesitate to reach out through any of the below channels!</h6>
-                    <p>Email: <a href="mailto:sarabiatchinyi@gmail.com">sarabiatchinyi@gmail.com</a><br>
-                    Mobile: +33 7 69 30 67 08<br>
-                    LinkedIn: <a href="https://www.linkedin.com/in/sara-biatchinyi-20848513b/"> Click here</a><br>
-                    Instagram: <a href="https://www.instagram.com/sara.biatchinyi/">Click here</a><br></h3>
-                    </p>
-                </section>
-        
-                    <!-- Hidden instructions popup -->
-                <div id="indexHelpPopup" class="indexHelpPopup">
-                    <div class="indexPopupContent">
-                        <span id="indexPopupClose" class="indexPopupClose">&times;</span>
-                        <h3>Help</h3>
-                        <p>Popup instructions for using the website.</p>
+
+                <!-- Hidden header popups -->
+                <div id="indexHelpPopup" class="contactPopup">
+                    <div class="contactContent">
+                        <span id="indexPopupClose"></span>
+                        <h7>would you like to<br> work together?<br></h7>
+                        <h8><a href="mailto:sarabiatchinyi@gmail.com">e-mail</a><br>
+                        <a href="https://www.linkedin.com/in/sara-biatchinyi-20848513b/">linkedin</a><br>
+                        <a href="https://www.instagram.com/sara.biatchinyi/">instagram</a><br>
+                        </h8>
+                        <img class="popupStar" src="../headerImages/popupStar.png">
+                        <h9>web development by <a href="https://www.linkedin.com/in/todd-taylor-a8bba2220/" >todd taylor</a> & <a href="https://www.linkedin.com/in/jfgerrard/">jana gerrard</a></h9>
                     </div>
                 </div>
-
-
             </div>
             <div class="right-half">
                 <h2>Sara's research space*</h2>
 
-                <button class="" onclick="scrollToSection('section1')">BFA Thesis Afrikan Attitude: The Case for Decolonising Design</button>
+                <button class="bfa" onclick="scrollToSection('section1')">BFA Thesis Afrikan Attitude: The Case for Decolonising Design</button>
                 
                 <button class="" onclick="scrollToSection('section1')">BFA Thesis Afrikan Attitude: The Case for Decolonising Design</button>
                 <div class="box">
@@ -94,9 +107,4 @@
         </div>
         <script src="index.js"></script>
     </body>
-    <footer>
-            <div class="help">
-                <button id="indexShowHelp" class="indexShowHelp">Help</button>
-            </div>
-    </footer>
 </html>
