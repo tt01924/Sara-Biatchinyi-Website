@@ -63,7 +63,7 @@ h2 {
     margin: 0;
 }
 
-h3 {
+.left-half h3 {
     font-size: 36px;
     margin: 0.5em 0;
     max-width: 500px;
@@ -74,9 +74,8 @@ h4, p {
     color: #D9D9D9;
 }
 
-h4 {
+.left-half h4 {
     font-size: 32px;
-    font: bold;
     margin-bottom: -10px;
 }
 

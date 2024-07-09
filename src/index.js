@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             indexHelpPopup.style.display = "none";
         }
     });
+    window.scrollToSection = scrollToSection
 });
 
 
