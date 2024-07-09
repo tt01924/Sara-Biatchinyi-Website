@@ -11,7 +11,45 @@
     color: #1E541D;
 }
 
-.right-half h3{
-    color: #FF0A8E;
+.right-half button {
+    margin-top: 10px; 
     font-size: 18px;
+    background-color: #FF0A8E;
+    color: #E1E1E1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+.right-half .box {
+    margin-top: 100px;
+}
+
+.right-half h3 {
+    color: #1E541D;
+    font-size: 20px;
+}
+
+.right-half h4 {
+    color: #1E541D;
+    font-weight: 100;
+    font-size: 15px;
+    margin-left: 7%;
+    margin-top: -3%;
+}
+
+.right-half .content {
+    width: 65vh;
+    height: 75vh;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: transparent;
+    border: 3px solid #FF0A8E;
+}
+
+.right-half p {
+    color: black;
+    z-index: 2;
+    padding: 10px 10px;
 }
