@@ -48,14 +48,25 @@ nextButton.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const leftHalf = document.querySelector('.left-half');
     const rightHalf = document.querySelector('.right-half');
+    const researchHeader = document.querySelector(".research");
+    const designHeader = document.querySelector(".design");
+    
+    const activateLeft = () => {
+        leftHalf.classList.add("active")
+        rightHalf.classList.remove("active")
+    }
+    const activateRight = () => {
+        rightHalf.classList.add("active")
+        leftHalf.classList.remove("active")
+    }
 
-    leftHalf.addEventListener('mouseenter', () => {
-        rightHalf.style.backgroundColor = '#FFA4FB'; 
-    });
+    leftHalf.addEventListener('mouseenter', activateLeft);
+    designHeader.addEventListener("mouseenter", activateLeft);
+    designHeader.addEventListener("click", activateLeft);
 
-    leftHalf.addEventListener('mouseleave', () => {
-        rightHalf.style.backgroundColor = ''; 
-    });
+    rightHalf.addEventListener('mouseenter', activateRight);
+    researchHeader.addEventListener("mouseenter", activateRight);
+    researchHeader.addEventListener("click", activateRight);
 });
 
 // ************ Smooth scroll js to research projects *********
