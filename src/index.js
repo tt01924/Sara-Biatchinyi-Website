@@ -61,10 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     leftHalf.addEventListener('mouseenter', activateLeft);
+    designHeader.addEventListener("mouseenter", activateLeft);
     designHeader.addEventListener("click", activateLeft);
 
     rightHalf.addEventListener('mouseenter', activateRight);
-    researchHeader.addEventListener("click", activateRight)
+    researchHeader.addEventListener("mouseenter", activateRight);
+    researchHeader.addEventListener("click", activateRight);
 });
 
 // ************ Smooth scroll js to research projects *********
