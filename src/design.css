@@ -23,7 +23,7 @@ body {
     pointer-events: none;
 }
 
-.overlay-left:has(+.left-half:hover), .overlay-right:has(+.right-half:hover) {
+.overlay-left:has(+.left-half.active), .overlay-right:has(+.right-half.active) {
     background-color: transparent;
 }
 
