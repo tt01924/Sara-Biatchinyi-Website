@@ -41,7 +41,7 @@ header div {
     height: 100%;
     overflow: auto;
     background-color: rgb(217, 217, 217, 0.45);
-    
+    animation: fadein forwards 0.3s ease-in;
 }
 
 .contactContent {
@@ -53,6 +53,25 @@ header div {
     border-radius: 8px;
     text-align: center;
     font-family: var(--main-font);
+    animation: slide forwards 0.3s ease-out;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .popupStar {
