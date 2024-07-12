@@ -1,24 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+//local image imports
+import omek1 from "../designImages/omekXNikeImages/Omek1.jpg";
+import omek2 from "../designImages/omekXNikeImages/Omek2.jpg";
+import omek3 from "../designImages/omekXNikeImages/Omek3.jpg";
+import omek4 from "../designImages/omekXNikeImages/Omek4.jpg";
+import omek5 from "../designImages/omekXNikeImages/Omek5.jpg";
+
+import erg1 from "../designImages/omekXNetworkingNightImages/ERG1.jpg"
+import erg2 from "../designImages/omekXNetworkingNightImages/ERG2.jpg"
+import erg3 from "../designImages/omekXNetworkingNightImages/ERG3.jpg"
+import erg4 from "../designImages/omekXNetworkingNightImages/ERG4.jpg"
+import erg5 from "../designImages/omekXNetworkingNightImages/ERG5.jpg"
+
 ---
 
 <Layout title="Sara Biatchinyi">
 	<script src="../index.js"></script>
 	<header>
 
-		<img class="headerStar" src="../headerImages/headerStar.png">
+		<Image class="headerStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={35} height={35} />
 		<div>
 			<button class="research">research</button>
 		</div>
-		<img class="headerStar" src="../headerImages/headerStar.png">
+		<Image class="headerStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={35} height={35} />
 		<div>
 			<button class="design">design</button>
 		</div>
-		<img class="headerStar" src="../headerImages/headerStar.png">
+		<Image class="headerStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={35} height={35} />
 		<div class="contact">
 			<button id="indexShowHelp" class="indexShowHelp">contact</button>
 		</div>
-		<img class="headerStar" src="../headerImages/headerStar.png">
+		<Image class="headerStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={35} height={35} />
 	
 	</header>
 		<body>
@@ -37,11 +51,11 @@ import Layout from '../layouts/Layout.astro';
 							<div class="carousel">
 								<div class="slides">
 									<!-- Images -->
-									<img alt="Image 1" src="../designImages/omekXNikeImages/Omek1.jpg">
-									<img alt="Image 2" src="../designImages/omekXNikeImages/Omek2.jpg">
-									<img alt="Image 3" src="../designImages/omekXNikeImages/Omek3.jpg">
-									<img alt="Image 4" src="../designImages/omekXNikeImages/Omek4.jpg">
-									<img alt="Image 5" src="../designImages/omekXNikeImages/Omek5.jpg">
+									<Image src={omek1} alt="" />
+									<Image src={omek2} alt="" />
+									<Image src={omek3} alt="" />
+									<Image src={omek4} alt="" />
+									<Image src={omek5} alt="" />
 								</div>
 								<button class="prev">←</button>
 								<button class="next">→</button>
@@ -55,11 +69,11 @@ import Layout from '../layouts/Layout.astro';
 						<div class="carousel">
 							<div class="slides">
 								<!-- Images -->
-								<img alt="Image 1" src="../designImages/omekXNetworkingNightImages/ERG1.jpg">
-								<img alt="Image 2" src="../designImages/omekXNetworkingNightImages/ERG2.jpg">
-								<img alt="Image 3" src="../designImages/omekXNetworkingNightImages/ERG3.jpg">
-								<img alt="Image 4" src="../designImages/omekXNetworkingNightImages/ERG4.jpg">
-								<img alt="Image 5" src="../designImages/omekXNetworkingNightImages/ERG5.jpg">
+								<Image src={erg1} alt="" />
+								<Image src={erg2} alt="" />
+								<Image src={erg3} alt="" />
+								<Image src={erg4} alt="" />
+								<Image src={erg5} alt="" />
 							</div>
 							<button class="prev">←</button>
 							<button class="next">→</button>
@@ -76,7 +90,7 @@ import Layout from '../layouts/Layout.astro';
 							<a href="https://www.linkedin.com/in/sara-biatchinyi-20848513b/">linkedin</a><br>
 							<a href="https://www.instagram.com/sara.biatchinyi/">instagram</a><br>
 							</h8>
-							<img class="popupStar" src="../headerImages/popupStar.png">
+							<Image class="popupStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={50} height={50} />
 							<h9>web development by <a href="https://www.linkedin.com/in/todd-taylor-a8bba2220/" >todd taylor</a> & <a href="https://www.linkedin.com/in/jfgerrard/">jana gerrard</a></h9>
 						</div>
 					</div>
