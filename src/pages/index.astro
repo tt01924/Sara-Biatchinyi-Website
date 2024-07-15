@@ -1,19 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
-//local image imports
-import omek1 from "../designImages/omekXNikeImages/Omek1.jpg";
-import omek2 from "../designImages/omekXNikeImages/Omek2.jpg";
-import omek3 from "../designImages/omekXNikeImages/Omek3.jpg";
-import omek4 from "../designImages/omekXNikeImages/Omek4.jpg";
-import omek5 from "../designImages/omekXNikeImages/Omek5.jpg";
+import { sanityClient } from "sanity:client";
+import Project from '../components/Project.astro';
+import Research from '../components/Research.astro';
 
-import erg1 from "../designImages/omekXNetworkingNightImages/ERG1.jpg"
-import erg2 from "../designImages/omekXNetworkingNightImages/ERG2.jpg"
-import erg3 from "../designImages/omekXNetworkingNightImages/ERG3.jpg"
-import erg4 from "../designImages/omekXNetworkingNightImages/ERG4.jpg"
-import erg5 from "../designImages/omekXNetworkingNightImages/ERG5.jpg"
-
+const projects = await sanityClient.fetch('*[_type == "project"]')
+const research = await sanityClient.fetch('*[_type == "research"]')
+console.log(research.length, Object.keys(research[0]))
 ---
 
 <Layout title="Sara Biatchinyi">
@@ -44,42 +38,8 @@ import erg5 from "../designImages/omekXNetworkingNightImages/ERG5.jpg"
 					<h3>I'm a graphic designer and a creative researcher.<br>
 						I'm all about observing, understanding, and applying - cultural studies and research are at the core of what I do.</h3>
 					<p class="arrow">&#8595;</p>
-					
-					<section class="project">
-						<h4>Fashion For Good: What Goes Around Comes Around</h4>
-						<p class="year">Year</p>
-							<div class="carousel">
-								<div class="slides">
-									<!-- Images -->
-									<Image src={omek1} alt="" />
-									<Image src={omek2} alt="" />
-									<Image src={omek3} alt="" />
-									<Image src={omek4} alt="" />
-									<Image src={omek5} alt="" />
-								</div>
-								<button class="prev">←</button>
-								<button class="next">→</button>
-							</div>
-						<p>The Amsterdam based exhibition hosted by Fashion for Good: News From the Future highlights the creative works of up and coming fashion students and designers working with cotton. Alongside the event identity, my responsibilities included designing the physical space in terms of graphic work. Identifying the key elements of the exhibition in order to showcase the young talent.</p>
-					</section>
-					
-					<section class="project secondSection">
-						<h4>PVH Poster Series: GOODEEDS Archive</h4>
-						<p class="year">Year</p>
-						<div class="carousel">
-							<div class="slides">
-								<!-- Images -->
-								<Image src={erg1} alt="" />
-								<Image src={erg2} alt="" />
-								<Image src={erg3} alt="" />
-								<Image src={erg4} alt="" />
-								<Image src={erg5} alt="" />
-							</div>
-							<button class="prev">←</button>
-							<button class="next">→</button>
-						</div>
-					<p>Alongside Aika Cherdabayeva, we developed a visionary platform concept with the purpose of overcoming boundaries that often alienate young artists and designers from non-white, cis, male environments. This platform serves as a space to create a directory of talented creatives from underrepresented communities, promoting inclusivity and providing them with greater visibility.</p>
-					</section>
+
+					{projects.map(p => <Project project={p} /> )}
 	
 					<!-- Hidden header popups -->
 					<div id="indexHelpPopup" class="contactPopup">
@@ -110,6 +70,8 @@ import erg5 from "../designImages/omekXNetworkingNightImages/ERG5.jpg"
 							<button onclick="scrollToSection('section4')">uomini che uccidono le donne.</button>
 						</div>
 					</div>
+
+					{research.map(r => <Research research={r} />)}
 					
 					<section class="box" id="section1">
 						<h3>Feeling Capitalism: An Analysis of the Evolutions of Creativity and Affect Theory through Tertiary Art Education and the Design Market</h3>
