@@ -7,6 +7,16 @@ import Research from '../components/Research.astro';
 
 const projects = await sanityClient.fetch('*[_type == "project"]')
 const research = await sanityClient.fetch('*[_type == "research"]')
+const settings = await sanityClient.fetch('*[_type == "siteSettings"][0]')
+Object.keys(settings).forEach(key => {
+	console.log(key)
+})
+// colour names in settings
+// mainBgCol
+// accentCol
+// researchTextCol
+// mainTextCol
+// researchBgCol
 ---
 
 <Layout title="Sara Biatchinyi">
