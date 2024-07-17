@@ -1,19 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
-//local image imports
-import omek1 from "../designImages/omekXNikeImages/Omek1.jpg";
-import omek2 from "../designImages/omekXNikeImages/Omek2.jpg";
-import omek3 from "../designImages/omekXNikeImages/Omek3.jpg";
-import omek4 from "../designImages/omekXNikeImages/Omek4.jpg";
-import omek5 from "../designImages/omekXNikeImages/Omek5.jpg";
+import { sanityClient } from "sanity:client";
+import Project from '../components/Project.astro';
+import Research from '../components/Research.astro';
 
-import erg1 from "../designImages/omekXNetworkingNightImages/ERG1.jpg"
-import erg2 from "../designImages/omekXNetworkingNightImages/ERG2.jpg"
-import erg3 from "../designImages/omekXNetworkingNightImages/ERG3.jpg"
-import erg4 from "../designImages/omekXNetworkingNightImages/ERG4.jpg"
-import erg5 from "../designImages/omekXNetworkingNightImages/ERG5.jpg"
-
+const projects = await sanityClient.fetch('*[_type == "project"]')
+const research = await sanityClient.fetch('*[_type == "research"]')
+const settings = await sanityClient.fetch('*[_type == "siteSettings"][0]')
+Object.keys(settings).forEach(key => {
+	console.log(key)
+})
+// colour names in settings
+// mainBgCol
+// accentCol
+// researchTextCol
+// mainTextCol
+// researchBgCol
 ---
 
 <Layout title="Sara Biatchinyi">
@@ -35,117 +38,45 @@ import erg5 from "../designImages/omekXNetworkingNightImages/ERG5.jpg"
 		<Image class="headerStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={35} height={35} />
 	
 	</header>
-		<body>
-			<div class="container">
-				<div class="overlay-left"></div>
-				<div class="left-half active">
-					<h2>hello, my name is</h2>
-					<h1>sara biatchinyi.</h1>
-					<h3>I'm a graphic designer and a creative researcher.<br>
-						I'm all about observing, understanding, and applying - cultural studies and research are at the core of what I do.</h3>
-					<p class="arrow">&#8595;</p>
-					
-					<section class="project">
-						<h4>Fashion For Good: What Goes Around Comes Around</h4>
-						<p class="year">Year</p>
-							<div class="carousel">
-								<div class="slides">
-									<!-- Images -->
-									<Image src={omek1} alt="" />
-									<Image src={omek2} alt="" />
-									<Image src={omek3} alt="" />
-									<Image src={omek4} alt="" />
-									<Image src={omek5} alt="" />
-								</div>
-								<button class="prev">←</button>
-								<button class="next">→</button>
-							</div>
-						<p>The Amsterdam based exhibition hosted by Fashion for Good: News From the Future highlights the creative works of up and coming fashion students and designers working with cotton. Alongside the event identity, my responsibilities included designing the physical space in terms of graphic work. Identifying the key elements of the exhibition in order to showcase the young talent.</p>
-					</section>
-					
-					<section class="project secondSection">
-						<h4>PVH Poster Series: GOODEEDS Archive</h4>
-						<p class="year">Year</p>
-						<div class="carousel">
-							<div class="slides">
-								<!-- Images -->
-								<Image src={erg1} alt="" />
-								<Image src={erg2} alt="" />
-								<Image src={erg3} alt="" />
-								<Image src={erg4} alt="" />
-								<Image src={erg5} alt="" />
-							</div>
-							<button class="prev">←</button>
-							<button class="next">→</button>
-						</div>
-					<p>Alongside Aika Cherdabayeva, we developed a visionary platform concept with the purpose of overcoming boundaries that often alienate young artists and designers from non-white, cis, male environments. This platform serves as a space to create a directory of talented creatives from underrepresented communities, promoting inclusivity and providing them with greater visibility.</p>
-					</section>
-	
-					<!-- Hidden header popups -->
-					<div id="indexHelpPopup" class="contactPopup">
-						<div class="contactContent">
-							<span id="indexPopupClose"></span>
-							<h7>would you like to<br> work together?<br></h7>
-							<h8><a href="mailto:sarabiatchinyi@gmail.com">e-mail</a><br>
-							<a href="https://www.linkedin.com/in/sara-biatchinyi-20848513b/">linkedin</a><br>
-							<a href="https://www.instagram.com/sara.biatchinyi/">instagram</a><br>
-							</h8>
-							<Image class="popupStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={50} height={50} />
-							<h9>web development by <a href="https://www.linkedin.com/in/todd-taylor-a8bba2220/" >todd taylor</a> & <a href="https://www.linkedin.com/in/jfgerrard/">jana gerrard</a></h9>
-						</div>
-					</div>
-				</div>
+	<div class="container">
+		<div class="overlay-left"></div>
+		<div class="left-half active">
+			<h2>hello, my name is</h2>
+			<h1>sara biatchinyi.</h1>
+			<h3>I'm a graphic designer and a creative researcher.<br>
+				I'm all about observing, understanding, and applying - cultural studies and research are at the core of what I do.</h3>
+			<p class="arrow">&#8595;</p>
 
-				<div class="overlay-right"></div>
-				<div class="right-half">
-					<div class="front-page">
-						<h2>sara's research space*</h2>
-						<div class="buttons-container">
-							<button onclick="scrollToSection('section1')">Feeling Capitalism: An Analysis of the Evolutions of Creativity and Affect Theory through Tertiary Art Education and the Design Market</button>
-							
-							<button onclick="scrollToSection('section2')">Afrikan Attitude: The Case for Decolonising Design</button>
-							
-							<button onclick="scrollToSection('section3')">GOODEEDS Magazine</button>
-			
-							<button onclick="scrollToSection('section4')">uomini che uccidono le donne.</button>
-						</div>
-					</div>
-					
-					<section class="box" id="section1">
-						<h3>Feeling Capitalism: An Analysis of the Evolutions of Creativity and Affect Theory through Tertiary Art Education and the Design Market</h3>
-						<h4 class="location">Paris College of Art</h4>
-						<section class="content">
-							<p class="content-title">Introduction: Contextualising Decolonisation </p>
-							<p>In 2020, a global dialogue and introspection about structural racism, lack of equality, and limited diversity and inclusion in society were ushered by the 2020 Black Lives Matter movement. In many ways, it has been a revolutionary year for persons of African descent and those who support their plight. It has given people the power to demand for what they need. Decolonisation is a necessary element of true integration. Decolonisation as a term is defined as “the process in which a country that was previously a colony (controlled by another country) becomes politically independent”. Based on this definition, decolonisation has already been achieved. Unfortunately, the 1 implications of colonisation are so deeply ingrained in today's societies that it is difficult to believe that political independence can be equivalent to total independence for many countries. Decolonisation must extend beyond geography to mindset, aesthetics, and what is valued (and what is not).</p><p> This thesis focuses on decolonising design in Africa. It will examine the challenges faced and how decolonising design is essential to integrating and validating Africa's design on a global scale. The importance of decolonising design is essential for African designers to develop, while simultaneously not being held at a western standard. For this thesis, the concept of decolonisation will heavily focus on the role of western society and the suppression it exerts on African designers to succeed. The lack of space and equity for African designers in the design world is deafening. The political climate of 2020 pressurised institutions and private industries to evaluate their status and discuss decolonisation publicly. But what does decolonisation mean for them? The interpretation of this word can lead to performative action: employing more Persons Of Color (POC); making public statements in support of BLM on social media, or claiming that their mission statement has been adjusted to promote anti-racism. These actions can easily lead to empty promises, with no actual implementation of decolonisation.</p>
-						</section>
-					</section>
-	
-					<section class="box" id="section2">
-						<h3>Afrikan Attitude: The Case for Decolonising Design</h3>
-						<h4 class="location"></h4>
-						<section class="content">
-	
-						</section>
-					</section>
-	
-					<section class="box" id="section3">
-						<h3>GOODEEDS Magazine</h3>
-						<h4 class="location"></h4>
-						<section class="content">
-	
-						</section>
-					</section>
-	
-					<section class="box" id="section4">
-						<h3>uomini che uccidono le donne.</h3>
-						<h4 class="location"></h4>
-						<section class="content">
-	
-						</section>
-					</section>
-	
+			{projects.map(p => <Project project={p} /> )}
+
+			<!-- Hidden header popups -->
+			<div id="indexHelpPopup" class="contactPopup">
+				<div class="contactContent">
+					<span id="indexPopupClose"></span>
+					<h7>would you like to<br> work together?<br></h7>
+					<h8><a href="mailto:sarabiatchinyi@gmail.com">e-mail</a><br>
+					<a href="https://www.linkedin.com/in/sara-biatchinyi-20848513b/">linkedin</a><br>
+					<a href="https://www.instagram.com/sara.biatchinyi/">instagram</a><br>
+					</h8>
+					<Image class="popupStar" src="/Sara-Biatchinyi-Website/popupStar.png" alt='' width={50} height={50} />
+					<h9>web development by <a href="https://www.linkedin.com/in/todd-taylor-a8bba2220/" >todd taylor</a> & <a href="https://www.linkedin.com/in/jfgerrard/">jana gerrard</a></h9>
 				</div>
 			</div>
+		</div>
+
+		<div class="overlay-right"></div>
+		<div class="right-half">
+			<div class="front-page">
+				<h2>sara's research space*</h2>
+				<div class="buttons-container">
+					{research.map(r => <button>{r.title}</button>)}
+				</div>
+			</div>
+
+			{research.map(r => <Research research={r} />)}
+
+		</div>
+	</div>
 </Layout>
 
 <style>
