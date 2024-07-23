@@ -119,11 +119,17 @@ h4, p {
 }
 
 /* CSS for individual slide (image) */
-.slides img {
+.slide {
     flex: 0 0 auto; /* Disable flex grow and shrink */
     scroll-snap-align: start; /* Snap to start of each slide */
     width: 100%;
     height: auto;
+    display: flex;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: contain;
 }
 
 /* CSS for navigation buttons */

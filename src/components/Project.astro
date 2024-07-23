@@ -15,13 +15,15 @@ const imageUrls: string[] = project.image.map((source) => urlFor(source).url());
 
 <section class="project">
     <h4>{project.title}</h4>
-    <p class="year">Year</p>
+    <p class="year">{project.year}</p>
     <div class="carousel">
         <div class="slides">
             <!-- Images -->
             {
                 imageUrls.map((url) => {
-                    return <Image src={url} height={450} width={800} alt="" />;
+                    return (<div class="slide">
+                        <Image src={url} height={450} width={800} alt="" />;
+                    </div>)
                 })
             }
         </div>

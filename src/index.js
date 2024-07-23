@@ -25,23 +25,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // *********** JavaScript for carousel functionality ***********
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const slides = document.querySelector('.slides');
+const carousels = document.querySelectorAll('.carousel');
 
-prevButton.addEventListener('click', () => {
-    slides.scrollBy({
-        left: -slides.offsetWidth,
-        behavior: 'smooth'
-    });
-});
+carousels.forEach(carousel => {
+    const slides = carousel.querySelector(".slides");
+    const prevButton = carousel.querySelector('.prev');
+    const nextButton = carousel.querySelector('.next');
 
-nextButton.addEventListener('click', () => {
-    slides.scrollBy({
-        left: slides.offsetWidth,
-        behavior: 'smooth'
+    prevButton.addEventListener('click', () => {
+        console.log("trying to scroll")
+        slides.scrollBy({
+            left: -slides.offsetWidth,
+            behavior: 'smooth'
+        });
     });
-});
+    
+    nextButton.addEventListener('click', () => {
+        slides.scrollBy({
+            left: slides.offsetWidth,
+            behavior: 'smooth'
+        });
+    });
+})
+
 
 // ************ Hover colour change ******************
 
