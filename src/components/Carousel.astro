@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets"
+const { imageUrls } = Astro.props
+---
+
+<div class="carousel">
+    <div class="slides">
+        <!-- Images -->
+        {
+            imageUrls.map((url: string) => {
+                return (<div class="slide">
+                    <Image src={url} height={450} width={800} alt="" />;
+                </div>)
+            })
+        }
+    </div>
+    <button class="prev">←</button>
+    <button class="next">→</button>
+</div>

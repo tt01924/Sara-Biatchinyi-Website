@@ -1,17 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import { PortableText } from "astro-portabletext";
-// import imageUrlBuilder from "@sanity/image-url";
-// import { sanityClient } from "sanity:client";
-// const builder = imageUrlBuilder(sanityClient);
+import imageUrlBuilder from "@sanity/image-url";
+import { sanityClient } from "sanity:client";
+import Carousel from "./Carousel.astro";
+const builder = imageUrlBuilder(sanityClient);
+
 
 const {research} = Astro.props;
+console.log(research.image)
+
+const urlFor = (source) => {
+    return builder.image(source);
+};
+let imageUrls:string[] = []
+if(research.image && research.image.length) {
+    imageUrls = research.image.map((source) => urlFor(source).url());
+}
 ---
 <section class="box">
     <h3>{research.title}</h3>
     { research.subtitle && <h4 class="location">{research.subtitle}</h4>}
     { research.institution && <h4 class="location">{research.institution}</h4>}
     <section class="content">
+        {imageUrls.length > 0 && <Carousel imageUrls={imageUrls} />}
         <PortableText 
             value={research.text}
         />
