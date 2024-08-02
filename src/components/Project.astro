@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import { PortableText } from "astro-portabletext";
 import imageUrlBuilder from "@sanity/image-url";
 import { sanityClient } from "sanity:client";
+import Carousel from "./Carousel.astro";
 const builder = imageUrlBuilder(sanityClient);
 
 const { project } = Astro.props;
@@ -10,25 +10,19 @@ const { project } = Astro.props;
 const urlFor = (source) => {
     return builder.image(source);
 };
-const imageUrls: string[] = project.image.map((source) => urlFor(source).url());
+let imageUrls:string[] = []
+if(project.image && project.image.length) {
+    for(const source of project.image) {
+        if (source.asset != undefined) {
+            imageUrls.push(urlFor(source).url())
+        }
+    }
+}
 ---
 
 <section class="project">
     <h4>{project.title}</h4>
     <p class="year">{project.year}</p>
-    <div class="carousel">
-        <div class="slides">
-            <!-- Images -->
-            {
-                imageUrls.map((url) => {
-                    return (<div class="slide">
-                        <Image src={url} height={450} width={800} alt="" />;
-                    </div>)
-                })
-            }
-        </div>
-        <button class="prev">←</button>
-        <button class="next">→</button>
-    </div>
+    <Carousel imageUrls={imageUrls} />
     <PortableText value={project.description} />
 </section>
