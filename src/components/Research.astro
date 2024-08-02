@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { PortableText } from "astro-portabletext";
 import imageUrlBuilder from "@sanity/image-url";
 import { sanityClient } from "sanity:client";
@@ -8,14 +7,18 @@ const builder = imageUrlBuilder(sanityClient);
 
 
 const {research} = Astro.props;
-console.log(research.image)
 
 const urlFor = (source) => {
     return builder.image(source);
 };
+
 let imageUrls:string[] = []
 if(research.image && research.image.length) {
-    imageUrls = research.image.map((source) => urlFor(source).url());
+    for(const source of research.image) {
+        if (source.asset != undefined) {
+            imageUrls.push(urlFor(source).url())
+        }
+    }
 }
 ---
 <section class="box">
