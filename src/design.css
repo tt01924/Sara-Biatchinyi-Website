@@ -76,7 +76,7 @@ h4, p {
 
 .left-half h4 {
     font-size: 32px;
-    margin-bottom: -10px;
+    margin: 0.5em 0;
 }
 
 .arrow {
@@ -90,7 +90,13 @@ h4, p {
 .project .year {
     font-size: 24px;
     color: #FF0A8E;
-    margin: 1.5rem 0;
+    margin: 0 0 0.8em 0;
+}
+
+.project .project__subtitle {
+    color: #FF0A8E;
+    margin: 0.5em 0;
+    font-size: 18px;
 }
 
 .project p {

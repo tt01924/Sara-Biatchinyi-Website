@@ -22,6 +22,7 @@ if(project.image && project.image.length) {
 
 <section class="project">
     <h4>{project.title}</h4>
+    <p class="project__subtitle">{project.subtitle}</p>
     <p class="year">{project.year}</p>
     <Carousel imageUrls={imageUrls} />
     <PortableText value={project.description} />
