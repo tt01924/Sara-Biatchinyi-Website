@@ -162,3 +162,13 @@ h4, p {
     bottom: 0;
     background-color: transparent;
 }
+
+.right-half .prev {
+    color: #ff0a8e;
+    left: -30px;
+}
+
+.right-half .next {
+    color: #ff0a8e;
+    right: -30px;
+}
