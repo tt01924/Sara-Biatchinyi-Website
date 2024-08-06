@@ -194,12 +194,14 @@ h4, p {
         right: -60px;
         border-radius: 10px;
         bottom: 0;
+        color: #ededed;
         background-color: transparent;
     }
     .prev {
         left: -60px;
         border-radius: 10px;
         bottom: 0;
+        color: #ededed;
         background-color: transparent;
     }
     
