@@ -21,7 +21,7 @@ if(research.image && research.image.length) {
     }
 }
 ---
-<section class="box">
+<section class="box" id={research._id}>
     <h3>{research.title}</h3>
     { research.subtitle && <h4 class="location">{research.subtitle}</h4>}
     { research.institution && <h4 class="location">{research.institution}</h4>}

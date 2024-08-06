@@ -39,7 +39,7 @@ const research = await sanityClient.fetch('*[_type == "research"]')
 			<div class="front-page">
 				<h2>sara's research space*</h2>
 				<div class="buttons-container">
-					{research.map(r => <button>{r.title}</button>)}
+					{research.map(r => <button class="research-button" data-id={r._id} >{r.title}</button>)}
 				</div>
 			</div>
 

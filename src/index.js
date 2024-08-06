@@ -80,3 +80,10 @@ function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
 } 
+
+document.querySelectorAll(".research-button").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        const id = event.target.dataset.id;
+        scrollToSection(id)
+    })
+})
