@@ -3,6 +3,7 @@ import { PortableText } from "astro-portabletext";
 import imageUrlBuilder from "@sanity/image-url";
 import { sanityClient } from "sanity:client";
 import Carousel from "./Carousel.astro";
+import SmallCarousel from "./SmallCarousel.astro";
 const builder = imageUrlBuilder(sanityClient);
 
 
@@ -26,7 +27,7 @@ if(research.image && research.image.length) {
     { research.subtitle && <h4 class="location">{research.subtitle}</h4>}
     { research.institution && <h4 class="location">{research.institution}</h4>}
     <section class="content">
-        {imageUrls.length > 0 && <Carousel imageUrls={imageUrls} />}
+        {imageUrls.length > 0 && <SmallCarousel imageUrls={imageUrls} />}
         <PortableText 
             value={research.text}
         />
