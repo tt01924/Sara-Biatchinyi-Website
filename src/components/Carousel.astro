@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets"
 const { imageUrls } = Astro.props
 ---
 
@@ -9,7 +8,7 @@ const { imageUrls } = Astro.props
         {
             imageUrls.map((url: string) => {
                 return (<div class="slide">
-                    <Image src={url} height={450} width={800} alt="" />;
+                    <img src={url} alt="" />;
                 </div>)
             })
         }
