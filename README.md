@@ -1,4 +1,4 @@
-# Sara-Biatchinyi-Website
+# Website for a professor and graphic designer
 Project to showcase a clients research and graphic design portfolio in an unorthodox way.
 
 ## About
